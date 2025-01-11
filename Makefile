@@ -1,1 +1,2 @@
+CFLAGS += -I.
 all: highlyoptimized
