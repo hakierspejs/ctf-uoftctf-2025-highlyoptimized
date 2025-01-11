@@ -5,6 +5,7 @@
 */
 
 #include <defs.h>
+#include <stdio.h>
 
 
 //-------------------------------------------------------------------------
@@ -49,6 +50,10 @@ void __halt() {}
 void *off_4008 = &off_4008; // idb
 _QWORD code[265] =
 {
+  // example that prints digit '3' (0x33):
+  // OP_PUSH_VALUE,
+  // 0x33LL,
+  // OP_PUTCHAR,
   OP_PUSH_VALUE,
   58541471996096977LL,
   OP_PUSH_VALUE,
@@ -418,6 +423,7 @@ __int64 __fastcall main(int a1, char **a2, char **a3)
         break;
       case OP_PUTCHAR:
         putchar(SLOBYTE(stack[stack_pointer--]));
+        fflush(stdout);
         instruction_pointer = current_instruction;
         DEBUG_PRINT("putchar %d\n", stack[stack_pointer]);
         break;
