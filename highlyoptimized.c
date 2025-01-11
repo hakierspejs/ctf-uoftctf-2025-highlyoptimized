@@ -37,275 +37,283 @@ void __halt() {}
 //-------------------------------------------------------------------------
 // Data declarations
 
+#define OP_PUSH_VALUE 0
+#define OP_DUP_VALUE 1
+#define OP_SUBTRACT 2
+#define OP_CMP 3
+#define OP_JNZ 4
+#define OP_PUTCHAR 5
+#define OP_EXIT 6
+
 //_UNKNOWN main;
 void *off_4008 = &off_4008; // idb
-_QWORD qword_4020[265] =
+_QWORD code[265] =
 {
-  0LL,
+  OP_PUSH_VALUE,
   58541471996096977LL,
-  0LL,
+  OP_PUSH_VALUE,
   131LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   131LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   42044768350026761LL,
-  0LL,
+  OP_PUSH_VALUE,
   130LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   130LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   104093991169115492LL,
-  0LL,
+  OP_PUSH_VALUE,
   146LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   146LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   128563766204312876LL,
-  0LL,
+  OP_PUSH_VALUE,
   120LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   120LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   118183210859642192LL,
-  0LL,
+  OP_PUSH_VALUE,
   121LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   121LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   31759579751918036LL,
-  0LL,
+  OP_PUSH_VALUE,
   160LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   160LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   37922191436980238LL,
-  0LL,
+  OP_PUSH_VALUE,
   143LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   143LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   139168641091494270LL,
-  0LL,
+  OP_PUSH_VALUE,
   147LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   147LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   152909243010516658LL,
-  0LL,
+  OP_PUSH_VALUE,
   138LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   138LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   88946238250907572LL,
-  0LL,
+  OP_PUSH_VALUE,
   163LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   163LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   179824179782506694LL,
-  0LL,
+  OP_PUSH_VALUE,
   170LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   170LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   45174131531571636LL,
-  0LL,
+  OP_PUSH_VALUE,
   52LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   52LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   58562759984008198LL,
-  0LL,
+  OP_PUSH_VALUE,
   65LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   65LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   60481677685756789LL,
-  0LL,
+  OP_PUSH_VALUE,
   120LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   120LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   67459793699055203LL,
-  0LL,
+  OP_PUSH_VALUE,
   141LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   141LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   33046999828954552LL,
-  0LL,
+  OP_PUSH_VALUE,
   137LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   137LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   67963425659164234LL,
-  0LL,
+  OP_PUSH_VALUE,
   135LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   135LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   43796972412552174LL,
-  0LL,
+  OP_PUSH_VALUE,
   117LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   117LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   6408227318773632LL,
-  0LL,
+  OP_PUSH_VALUE,
   68LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   68LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   75570635003173892LL,
-  0LL,
+  OP_PUSH_VALUE,
   68LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   68LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   26842364308653847LL,
-  0LL,
+  OP_PUSH_VALUE,
   122LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   122LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  0LL,
+  OP_PUTCHAR,
+  OP_PUSH_VALUE,
   60541299067063520LL,
-  0LL,
+  OP_PUSH_VALUE,
   147LL,
-  2LL,
-  1LL,
-  0LL,
+  OP_SUBTRACT,
+  OP_DUP_VALUE,
+  OP_PUSH_VALUE,
   147LL,
-  3LL,
-  4LL,
+  OP_CMP,
+  OP_JNZ,
   9LL,
-  5LL,
-  6LL
+  OP_PUTCHAR,
+  OP_EXIT
 }; // weak
 char byte_4868; // weak
 
@@ -350,82 +358,82 @@ void sub_1050()
 //----- (00000000000010B0) ----------------------------------------------------
 __int64 __fastcall main(int a1, char **a2, char **a3)
 {
-  int v3; // ebx
-  int v4; // edx
-  int v5; // r13d
+  int stack_pointer; // ebx
+  int instruction_pointer; // edx
+  int current_instruction; // r13d
   __int64 v6; // rdx
   __int64 v7; // rax
   __int64 v8; // rax
-  __int64 v10[137]; // [rsp+0h] [rbp-448h] BYREF
+  __int64 stack[137]; // [rsp+0h] [rbp-448h] BYREF
 
-  v3 = 0;
-  v10[131] = __readfsqword(0x28u);
+  stack_pointer = 0;
+  stack[131] = __readfsqword(0x28u);
   puts("I will tell you the flag, if you don't mind waiting a few moments...");
-  memset(v10, 0, 0x410uLL);
-  v4 = 0;
+  memset(stack, 0, 0x410uLL);
+  instruction_pointer = 0;
   while ( 1 )
   {
-    v5 = v4 + 1;
-    switch ( qword_4020[v4] )
+    current_instruction = instruction_pointer + 1;
+    switch ( code[instruction_pointer] )
     {
-      case 0LL:
-        v8 = v3;
-        v4 += 2;
-        ++v3;
-        v10[v8 + 1] = qword_4020[v5];
+      case OP_PUSH_VALUE:
+        v8 = stack_pointer;
+        instruction_pointer += 2;
+        ++stack_pointer;
+        stack[v8 + 1] = code[current_instruction];
         break;
-      case 1LL:
-        v6 = v10[v3];
-        v7 = v3++;
-        v10[v7 + 1] = v6;
-        v4 = v5;
+      case OP_DUP_VALUE:
+        v6 = stack[stack_pointer];
+        v7 = stack_pointer++;
+        stack[v7 + 1] = v6;
+        instruction_pointer = current_instruction;
         break;
-      case 2LL:
-        v10[v3 - 1] -= v10[v3];
-        --v3;
-        ++v4;
+      case OP_SUBTRACT:
+        stack[stack_pointer - 1] -= stack[stack_pointer];
+        --stack_pointer;
+        ++instruction_pointer;
         break;
-      case 3LL:
-        v10[v3 - 1] = v10[v3] < (unsigned __int64)v10[v3 - 1];
-        --v3;
-        ++v4;
+      case OP_CMP:
+        stack[stack_pointer - 1] = stack[stack_pointer] < (unsigned __int64)stack[stack_pointer - 1];
+        --stack_pointer;
+        ++instruction_pointer;
         break;
-      case 4LL:
-        --v3;
-        v4 += 2;
-        if ( v10[v3 + 1] )
-          v4 -= LODWORD(qword_4020[v5]);
+      case OP_JNZ:
+        --stack_pointer;
+        instruction_pointer += 2;
+        if ( stack[stack_pointer + 1] )
+          instruction_pointer -= LODWORD(code[current_instruction]);
         break;
-      case 5LL:
-        putchar(SLOBYTE(v10[v3--]));
-        v4 = v5;
+      case OP_PUTCHAR:
+        putchar(SLOBYTE(stack[stack_pointer--]));
+        instruction_pointer = current_instruction;
         break;
-      case 6LL:
-        return 0LL;
+      case OP_EXIT:
+        return OP_PUSH_VALUE;
       default:
-        ++v4;
+        ++instruction_pointer;
         break;
     }
   }
 }
-// 4020: using guessed type _QWORD qword_4020[265];
+// 4020: using guessed type _QWORD code[265];
 
 //----- (0000000000001220) ----------------------------------------------------
 // positive sp value has been detected, the output may be wrong!
 void __fastcall __noreturn start(__int64 a1, __int64 a2, void (*a3)(void))
 {
-  __int64 v3; // rax
-  int v4; // esi
-  __int64 v5; // [rsp-8h] [rbp-8h] BYREF
+  __int64 stack_pointer; // rax
+  int instruction_pointer; // esi
+  __int64 current_instruction; // [rsp-8h] [rbp-8h] BYREF
   char *retaddr; // [rsp+0h] [rbp+0h] BYREF
 
-  v4 = v5;
-  v5 = v3;
-  _libc_start_main((int (__fastcall *)(int, char **, char **))main, v4, &retaddr, 0LL, 0LL, a3, &v5);
+  instruction_pointer = current_instruction;
+  current_instruction = stack_pointer;
+  _libc_start_main((int (__fastcall *)(int, char **, char **))main, instruction_pointer, &retaddr, OP_PUSH_VALUE, OP_PUSH_VALUE, a3, &current_instruction);
   __halt();
 }
 // 122A: positive sp value 8 has been found
-// 1231: variable 'v3' is possibly undefined
+// 1231: variable 'stack_pointer' is possibly undefined
 
 //----- (0000000000001250) ----------------------------------------------------
 char *sub_1250()
@@ -437,7 +445,7 @@ char *sub_1250()
 //----- (0000000000001280) ----------------------------------------------------
 __int64 sub_1280()
 {
-  return 0LL;
+  return OP_PUSH_VALUE;
 }
 
 //----- (00000000000012C0) ----------------------------------------------------
