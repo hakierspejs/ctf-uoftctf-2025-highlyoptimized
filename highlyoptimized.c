@@ -355,6 +355,12 @@ void sub_1050()
   sub_1020();
 }
 
+#ifdef DEBUG
+#define DEBUG_PRINT(fmt, ...) printf(fmt, ##__VA_ARGS__)
+#else
+#define DEBUG_PRINT(fmt, ...)
+#endif
+
 //----- (00000000000010B0) ----------------------------------------------------
 __int64 __fastcall main(int a1, char **a2, char **a3)
 {
@@ -374,6 +380,7 @@ __int64 __fastcall main(int a1, char **a2, char **a3)
   while ( 1 )
   {
     current_instruction = instruction_pointer + 1;
+    DEBUG_PRINT("[ip=%d sp=%d] ", instruction_pointer, stack_pointer);
     switch ( code[instruction_pointer] )
     {
       case OP_PUSH_VALUE:
@@ -381,34 +388,41 @@ __int64 __fastcall main(int a1, char **a2, char **a3)
         instruction_pointer += 2;
         ++stack_pointer;
         stack[v8 + 1] = code[current_instruction];
+        DEBUG_PRINT("push %d\n", code[current_instruction]);
         break;
       case OP_DUP_VALUE:
         v6 = stack[stack_pointer];
         v7 = stack_pointer++;
         stack[v7 + 1] = v6;
         instruction_pointer = current_instruction;
+        DEBUG_PRINT("dup %d\n", stack[stack_pointer]);
         break;
       case OP_SUBTRACT:
         stack[stack_pointer - 1] -= stack[stack_pointer];
         --stack_pointer;
         ++instruction_pointer;
+        DEBUG_PRINT("sub %d\n", stack[stack_pointer]);
         break;
       case OP_CMP:
         stack[stack_pointer - 1] = stack[stack_pointer] < (unsigned __int64)stack[stack_pointer - 1];
         --stack_pointer;
         ++instruction_pointer;
+        DEBUG_PRINT("cmp %d\n", stack[stack_pointer]);
         break;
       case OP_JNZ:
         --stack_pointer;
         instruction_pointer += 2;
         if ( stack[stack_pointer + 1] )
           instruction_pointer -= LODWORD(code[current_instruction]);
+        DEBUG_PRINT("jnz %d\n", stack[stack_pointer]);
         break;
       case OP_PUTCHAR:
         putchar(SLOBYTE(stack[stack_pointer--]));
         instruction_pointer = current_instruction;
+        DEBUG_PRINT("putchar %d\n", stack[stack_pointer]);
         break;
       case OP_EXIT:
+        DEBUG_PRINT("exit\n");
         return OP_PUSH_VALUE;
       default:
         ++instruction_pointer;
