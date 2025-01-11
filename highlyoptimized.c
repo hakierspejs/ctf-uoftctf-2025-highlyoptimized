@@ -8,14 +8,14 @@
 
 
 //-------------------------------------------------------------------------
-// Function declarations
+// Function declarations / stubs
 
 __int64 (**init_proc())(void);
 void sub_1020();
 void sub_1030();
 void sub_1040();
 void sub_1050();
-// int __fastcall _cxa_finalize(void *);
+int __fastcall _cxa_finalize(void *) {}
 // int putchar(int c);
 // int puts(const char *s);
 void __fastcall __noreturn start(__int64 a1, __int64 a2, void (*a3)(void));
@@ -24,14 +24,20 @@ __int64 sub_1280();
 char *sub_12C0();
 __int64 sub_1300();
 void term_proc();
-// int __fastcall _libc_start_main(int (__fastcall *main)(int, char **, char **), int argc, char **ubp_av, void (*init)(void), void (*fini)(void), void (*rtld_fini)(void), void *stack_end);
-// int __fastcall __cxa_finalize(void *);
-// __int64 _gmon_start__(void); weak
+int __fastcall _libc_start_main(int (__fastcall *main)(int, char **, char **), int argc, char **ubp_av, void (*init)(void), void (*fini)(void), void (*rtld_fini)(void), void *stack_end) {}
+int __fastcall __cxa_finalize(void *) {}
+__int64 _gmon_start__(void) {}
+
+void JUMPOUT(__int64 a1) {}
+__int64 __readfsqword(unsigned int fsindex) {}
+void __halt() {}
+
+
 
 //-------------------------------------------------------------------------
 // Data declarations
 
-_UNKNOWN main;
+//_UNKNOWN main;
 void *off_4008 = &off_4008; // idb
 _QWORD qword_4020[265] =
 {

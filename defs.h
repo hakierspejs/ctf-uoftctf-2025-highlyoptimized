@@ -299,3 +299,6 @@ template<class T, class U> int8 __CFADD__(T x, U y)
 #define snprintf _snprintf
 #define vsnprintf _vsnprintf
 #endif
+
+#define __noreturn __attribute__((noreturn))
+#define __fastcall __attribute__((fastcall))
